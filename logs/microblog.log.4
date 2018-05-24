@@ -1,0 +1,108 @@
+2018-05-18 14:15:17,957 ERROR: Exception on /review [GET] [in /home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dev/Development/review-site/app/routes.py", line 170, in review
+    return render_template('review.html', title='Review', next_url=next_url,
+NameError: name 'next_url' is not defined
+2018-05-18 14:16:00,803 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 14:27:05,894 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 14:27:09,532 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 14:29:29,344 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 14:41:28,234 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 14:44:03,983 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 14:47:10,064 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 14:49:14,160 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 14:51:49,130 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 15:19:06,311 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 15:19:11,601 ERROR: Exception on /review [POST] [in /home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: review
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dev/Development/review-site/app/routes.py", line 167, in review
+    db.session.commit()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 2254, in flush
+    self._flush(objects)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 2380, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 2344, in _flush
+    flush_context.execute()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: review [SQL: 'INSERT INTO review (body, timestamp, user_id) VALUES (?, ?, ?)'] [parameters: ('sdkfj', '2018-05-18 13:19:11.600376', 3)] (Background on this error at: http://sqlalche.me/e/e3q8)
+2018-05-18 15:20:00,694 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-18 15:20:07,001 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 12:41:12,937 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:16:23,811 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:19:34,361 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:22:30,618 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:28:14,943 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]

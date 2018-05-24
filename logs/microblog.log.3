@@ -1,0 +1,99 @@
+2018-05-21 13:28:23,520 ERROR: Exception on /explore [GET] [in /home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dev/Development/review-site/app/routes.py", line 159, in explore
+    reviews=reviews.items, next_url=next_url, prev_url=prev_url)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/dev/Development/review-site/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/dev/Development/review-site/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/dev/Development/review-site/app/templates/base.html", line 49, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/dev/Development/review-site/app/templates/index.html", line 14, in block "app_content"
+    {% include '_review.html' %}
+  File "/home/dev/Development/review-site/app/templates/_review.html", line 12, in top-level template code
+    {{ post.author.username }}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'post' is undefined
+2018-05-21 13:28:25,096 ERROR: Exception on /explore [GET] [in /home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dev/Development/review-site/app/routes.py", line 159, in explore
+    reviews=reviews.items, next_url=next_url, prev_url=prev_url)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/dev/Development/review-site/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/dev/Development/review-site/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/dev/Development/review-site/app/templates/base.html", line 49, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/dev/Development/review-site/app/templates/index.html", line 14, in block "app_content"
+    {% include '_review.html' %}
+  File "/home/dev/Development/review-site/app/templates/_review.html", line 12, in top-level template code
+    {{ post.author.username }}
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'post' is undefined
+2018-05-21 13:29:00,662 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]

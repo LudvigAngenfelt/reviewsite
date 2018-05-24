@@ -1,0 +1,34 @@
+2018-05-21 13:37:59,865 ERROR: Exception on / [GET] [in /home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dev/Development/review-site/app/routes.py", line 31, in index
+    reviews = current_user.followed_reviews().paginate(
+  File "/home/dev/Development/review-site/venv/lib/python3.5/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_reviews'
+2018-05-21 13:39:14,037 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:43:05,327 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:43:08,315 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:48:31,227 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:53:13,809 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:57:01,736 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-21 13:57:03,696 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-23 08:13:39,421 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-23 09:12:13,883 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-23 09:14:41,259 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-23 09:21:16,773 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-23 11:43:45,400 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
+2018-05-23 11:44:01,717 INFO: Microblog startup [in /home/dev/Development/review-site/app/__init__.py:46]
